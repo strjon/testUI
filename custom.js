@@ -48,7 +48,7 @@ $(window).on('load', function() {
     contractInstance.getGreeting(function(error, greeting) {
         if (error) {
             var errorMsg = 'error reading greeting from smart contract: ' + error;
-            $('#content').text(errorMsg);
+            $('#content').append(errorMsg);
             console.log(errorMsg);
             return;
         }
