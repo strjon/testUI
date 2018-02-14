@@ -1,35 +1,6 @@
 $(window).on('load', function() {
     var contractAddress = "0x7dc0e3d2135e98629ea9CE99F13c4D82B1D397a3"; // in Ropsten testnet!
-    var contractAbi = [
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getGreeting",
-		"outputs": [
-			{
-				"name": "s",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "s",
-				"type": "string"
-			}
-		],
-		"name": "setGreeting",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	}
-];
+    var contractAbi = [{"constant":false,"inputs":[{"name":"s","type":"string"}],"name":"setGreeting","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getGreeting","outputs":[{"name":"s","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}];
 
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
     if (typeof web3 !== 'undefined') {
