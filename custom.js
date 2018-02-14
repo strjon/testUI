@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-    var contractAddress = "0x7dc0e3d2135e98629ea9CE99F13c4D82B1D397a3"; // in Rinkeby testnet!
+    var contractAddress = "0x7dc0e3d2135e98629ea9CE99F13c4D82B1D397a3"; // in Ropsten testnet!
     var contractAbi = [
 	{
 		"constant": true,
