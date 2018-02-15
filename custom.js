@@ -1,8 +1,28 @@
 $(window).on('load', function() {
     var contractAddress = "0x822d75202275c75219d194df6a82f1e245dbf944"; // in Ropsten testnet!
-    var contractAbi = [{"constant":false,"inputs":[{"name":"s","type":"string"}],"name":"setGreeting","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getGreeting","outputs":[{"name":"s","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}];
-
-    // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+    var contractAbi = [{
+	"constant": false,
+	"inputs": [{
+		"name": "s",
+		"type": "string"
+	}],
+	"name": "setGreeting",
+	"outputs": [],
+	"payable": false,
+	"stateMutability": "nonpayable",
+	"type": "function"
+}, {
+	"constant": true,
+	"inputs": [],
+	"name": "getGreeting",
+	"outputs": [{
+		"name": "s",
+		"type": "string"
+	}],
+	"payable": false,
+	"stateMutability": "view",
+	"type": "function"
+}];
     if (typeof web3 !== 'undefined') {
         // Use Mist/MetaMask's provider
         $('#content').append('<p>I has web3!!!</p>');
